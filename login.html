@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="login/login.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="helper/ConnectionHelper.js"></script>
+    <script type="text/javascript" src="login/ajax.js"></script>
+
+</head>
+<body>
+<div class="login">
+    <form action="/" method="post">
+        <div class="login_fill">
+            <div class="login_row">
+                <input type="text" id="user" placeholder="Username"/>
+            </div>
+            <div class="login_row">
+                <input type="password" id="password" placeholder="Password"/>
+            </div>
+            <button type='button' onclick="resolve_send()">Enter</button>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

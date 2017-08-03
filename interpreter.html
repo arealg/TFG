@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Interpreter</title>
+    <link href="interpreter/css/app.css" rel="stylesheet" type="text/css">
+    <link href="interpreter/css/subscriber.css" rel="stylesheet" type="text/css">
+    <link href="interpreter/css/publisher.css" rel="stylesheet" type="text/css">
+    <link href="interpreter/css/video.css" rel="stylesheet" type="text/css">
+    <link href="interpreter/css/buttons.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+</head>
+<body>
+    <div id="videos">
+
+        <div id="subscriber" class="subs_class">
+            <div class="tool_subscriber">
+                <button class='button_camera_subscriber' id='camera_subscriber'onclick="control_camera_subscriber()"></button>
+                <button class='button_audio_subscriber' id='audio_subscriber'onclick="control_audio_subscriber()"></button>
+            </div>
+        </div>
+        <div id="publisher" data-show="true" class="pub_class">
+            <div class="tool_publisher" id="tool_publisher">
+                <button  class='button_camera_publisher' id='camera_publisher' onclick="control_camera_publisher()"></button>
+                <button  class='button_audio_publisher' id='audio_publisher' onclick="control_audio_publisher()"></button>
+            </div>
+        </div>
+        <div class="tool_videos">
+            <button class='button_change' id='change' onclick="change_side()"></button>
+            <button class='button_interpreter' id='interpreter' onclick="change_interpreter()"></button>
+            <button class='button_video_interpret' id='video_interpret' onclick="change_video_interpreter()"></button>
+        </div>
+
+    </div>
+  
+    <script type="text/javascript" src="interpreter/js/actions.js"></script>
+    <script type="text/javascript" src="interpreter/js/publisher.js"></script>
+    <script type="text/javascript" src="interpreter/js/subscriber.js"></script>
+    <script type="text/javascript" src="interpreter/js/app.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+.button_change {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(../img/change.png) no-repeat center;
+    background-size: 40px 40px;
+}
+
+.rigth_side {
+    right: 0;
+}
+
+.left_side {
+    left: 0;
+}
+
+.button_interpreter {
+    position: absolute;
+    width: 40px;
+    height:40px;
+    background: url(../img/interpreter.png) no-repeat center;
+    background-size: 40px 40px;
+    left: 50px;
+}
+
+.button_video_interpret {
+    position: absolute;
+    width: 40px;
+    height:40px;
+    background: url(../img/video_interpret.png) no-repeat center;
+    background-size: 40px 40px;
+    left: 100px;
+}
+
+.zoom {
+    background: url(../img/zoom.png) no-repeat center;
+    background-size: 40px 40px;
+}
