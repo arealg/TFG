@@ -70,6 +70,9 @@ function connectSession(token){
 initSession();
 connectSession(data.token);
 
+var OpenTok = require('opentok'),
+    
+var opentok = new OpenTok('45931162', 'd62e87098a72072a1acd2372cb76de807c5c3785');
 
 
 function broadcast_live (){
@@ -79,8 +82,7 @@ function broadcast_live (){
     "layout": {
       "type": "custom",
       "stylesheet": "video_pub.broadcast_live {width: 780px; height: 538px; right: 20px; top:20px; z-index: 100;}"
-  }
-
+      }
     };
 
     var time = +new Date;
@@ -96,13 +98,8 @@ function broadcast_live (){
 
       xhttp.open('POST', 'https://api.opentok.com/v2/project/' + data.apiKey +'/broadcast', true);
       xhttp.setRequestHeader("Content-Type", "application/json");
-      xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
-      xhttp.setRequestHeader("X-OPENTOK-AUTH", {
-          "iss": data.apiKey,
-          "ist": "TFG",
-          "iat": time,
-          "exp": time + 180,
-      });
+      //xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+      xhttp.setRequestHeader("X-OPENTOK-AUTH", opentok.generateJwt());
       xhttp.send(datos);
     });
 }
