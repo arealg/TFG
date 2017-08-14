@@ -71,7 +71,7 @@ function connectSession(token){
 initSession();
 connectSession(data.token);
 
-var OpenTok = requirejs('opentok');
+var OpenTok = require('opentok');
     
 var opentok = new OpenTok(data.apiKey, data.secret);
 
