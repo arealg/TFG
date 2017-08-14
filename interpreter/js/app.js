@@ -1,6 +1,7 @@
 
 var data = {
   apiKey: '45931162',
+  secret: 'd62e87098a72072a1acd2372cb76de807c5c3785',
   sessionID: '2_MX40NTkzMTE2Mn5-MTUwMTc0Njk0MTc4NH5IYUR4cXp0OHBmVUlPckdZYy9iaEthMTd-fg',
   token: 'T1==cGFydG5lcl9pZD00NTkzMTE2MiZzaWc9ZjAyOTk1OWVjMTFiMTFjODhiOWJlMjA3ZWQ5NDk0NDVmOTdmMDI2NzpzZXNzaW9uX2lkPTJfTVg0ME5Ua3pNVEUyTW41LU1UVXdNVGMwTmprME1UYzROSDVJWVVSNGNYcDBPSEJtVlVsUGNrZFpZeTlpYUV0aE1UZC1mZyZjcmVhdGVfdGltZT0xNTAxNzQ2OTc1Jm5vbmNlPTAuMTU4NDAxNTI3MzYwMzY1NiZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTA0MzM4OTc0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9'
 }
@@ -72,7 +73,7 @@ connectSession(data.token);
 
 var OpenTok = require('opentok'),
     
-var opentok = new OpenTok('45931162', 'd62e87098a72072a1acd2372cb76de807c5c3785');
+var opentok = new OpenTok(data.apiKey, data.secret);
 
 
 function broadcast_live (){
