@@ -96,6 +96,7 @@ function broadcast_live (){
 
       xhttp.open('POST', 'https://api.opentok.com/v2/project/' + data.apiKey +'/broadcast', true);
       xhttp.setRequestHeader("Content-Type", "application/json");
+      xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
       xhttp.setRequestHeader("X-OPENTOK-AUTH", {
           "iss": data.apiKey,
           "ist": "TFG",
