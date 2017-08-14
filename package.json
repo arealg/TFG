@@ -4,7 +4,22 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "opentok": "^2.6.0"
+    "amqp": "^0.2.4",
+    "cookie": "^0.2.3",
+    "facebook-node-sdk": "^0.2.0",
+    "fs-extra": "^0.26.3",
+    "html-pdf": "^2.1.0",
+    "mu2": "^0.5.21",
+    "mysql": "^2.13.0",
+    "opentok": "^2.6.0",
+    "path": "^0.12.7",
+    "promise": "^7.1.1",
+    "qrcode": "^0.9.0",
+    "request": "^2.75.0",
+    "restapi": "ferimer/restapi#2340177a3ea2aa5fc66c6f84945645a40ec42ffc",
+    "sha1": "^1.1.1",
+    "socket.io": "^2.0.2",
+    "uuid": "^2.0.1"
   },
   "devDependencies": {},
   "scripts": {
