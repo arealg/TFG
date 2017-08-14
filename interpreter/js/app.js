@@ -69,3 +69,42 @@ function connectSession(token){
 
 initSession();
 connectSession(data.token);
+
+
+
+function broadcast_live (){
+  console.log(session_ID);
+  var datos =
+    {
+    "sessionId": data.sessionID,
+    "layout": {
+      "type": "custom",
+      "stylesheet": "video_subs.broadcast_live {width: 780px; height: 538px; right: 20px; top:20px; z-index: 100;}"
+  }
+
+    };
+
+  datos = JSON.stringify(datos);
+    return new Promise(function (resolve, reject) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if ((this.readyState == 4 && this.status == 200)) {
+          resolve(xhttp.responseText);
+        }
+      };
+
+      xhttp.open('POST', 'https://api.opentok.com/v2/project/' + data.apiKey +'/broadcast', true);
+      xhttp.setRequestHeader("Content-Type", "application/json");
+      xhttp.setRequestHeader("X-OPENTOK-AUTH", auth_token);
+      xhttp.send(datos);
+    });
+}
+
+
+function resolve_broadcast(){
+  broadcast_live().then((value) => {
+    console.log(value);
+  })
+}
+
+resolve_broadcast();
