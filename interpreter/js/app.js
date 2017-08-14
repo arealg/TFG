@@ -83,6 +83,8 @@ function broadcast_live (){
 
     };
 
+    var time = +new Date;
+
   datos = JSON.stringify(datos);
     return new Promise(function (resolve, reject) {
       var xhttp = new XMLHttpRequest();
@@ -97,8 +99,8 @@ function broadcast_live (){
       xhttp.setRequestHeader("X-OPENTOK-AUTH", {
           "iss": data.apiKey,
           "ist": "TFG",
-          "iat": int(time.time()),
-          "exp": int(time.time()) + 180,
+          "iat": time,
+          "exp": time + 180,
       });
       xhttp.send(datos);
     });
