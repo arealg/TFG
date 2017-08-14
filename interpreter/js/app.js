@@ -94,7 +94,12 @@ function broadcast_live (){
 
       xhttp.open('POST', 'https://api.opentok.com/v2/project/' + data.apiKey +'/broadcast', true);
       xhttp.setRequestHeader("Content-Type", "application/json");
-      xhttp.setRequestHeader("X-OPENTOK-AUTH", auth_token);
+      xhttp.setRequestHeader("X-OPENTOK-AUTH", {
+          "iss": data.apiKey,
+          "ist": "TFG",
+          "iat": 10000,
+          "exp": 10000,
+      });
       xhttp.send(datos);
     });
 }
