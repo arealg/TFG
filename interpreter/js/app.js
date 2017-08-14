@@ -78,7 +78,7 @@ function broadcast_live (){
     "sessionId": data.sessionID,
     "layout": {
       "type": "custom",
-      "stylesheet": "video_subs.broadcast_live {width: 780px; height: 538px; right: 20px; top:20px; z-index: 100;}"
+      "stylesheet": "video_pub.broadcast_live {width: 780px; height: 538px; right: 20px; top:20px; z-index: 100;}"
   }
 
     };
