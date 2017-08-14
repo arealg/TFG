@@ -1,0 +1,23 @@
+{
+  "name": "tfg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "opentok": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arealg/TFG.git"
+  },
+  "author": "Ana Real Gijon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arealg/TFG/issues"
+  },
+  "homepage": "https://github.com/arealg/TFG#readme"
+}
