@@ -73,7 +73,6 @@ connectSession(data.token);
 
 
 function broadcast_live (){
-  console.log(session_ID);
   var datos =
     {
     "sessionId": data.sessionID,
