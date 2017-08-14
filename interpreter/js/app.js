@@ -71,9 +71,9 @@ function connectSession(token){
 initSession();
 connectSession(data.token);
 
-var OpenTok = require('opentok'),
+var OpenTok = require('opentok');
     
-let opentok = new OpenTok(data.apiKey, data.secret);
+var opentok = new OpenTok(data.apiKey, data.secret);
 
 
 function broadcast_live (){
